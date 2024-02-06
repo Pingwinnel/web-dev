@@ -1,0 +1,156 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    overflow-x:hidden;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+    background: #fff;
+    color :#000;
+    font-size: 15px;
+    line-height: 1.5;
+}
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    font-family: inherit;
+    font-weight: 600;
+    line-height: 1.2;
+}
+.h2, h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+a{
+    color:#262626;
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+.container{
+    width: 100%;
+    margin: auto;
+}
+.main_nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    padding: 20px 0;
+    font-size: 13px;
+    margin-left: 40px;
+}
+.main_nav .logo{
+    width:110px;
+    margin-left: 20px;
+}
+.main_nav ul{
+    display: flex;
+    flex:1;
+    margin-left: 20px;
+
+}
+.main_nav ul.right-menu{
+    display: flex;
+    align-items: flex-end;
+    align-content: flex-end;
+    justify-content: flex-end;
+}
+.main_nav ul li{
+    padding: 0 10px;
+}
+.main_nav ul li a{
+    padding-bottom: 2px;
+}
+.main_nav ul li a:hover {
+    border-bottom: 2px solid #262626;
+}
+.main_nav ul.right-menu li a i.fa-regular{
+margin-right: 50px;
+}
+.main-nav ul.main-menu {
+    flex:1;
+    margin-left: 20px;
+}
+.showcase{
+    width: 100%;
+    height: 70%;
+    background: url("https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Highlight-Hero-Windows11-GlobalLaunch:VP5-1920x600")
+    no-repeat   center center/cover  ;
+    color:#ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+.showcase h1 ,.showcase p ,.btn{
+    margin-left: 40px;
+    padding-left: 20px;
+    width: 60vh;
+}
+
+ ul.header-sidebar{
+     width: 100%;
+    display: flex;
+     justify-content: center;
+    align-items:center;
+     margin-top: 20px;
+     margin-bottom: 25px;
+}
+ul.header-sidebar li a i:hover{
+    opacity: 0.80;
+}
+ul.header-sidebar li a{
+    margin: 0 20px ;
+}
+.btn {
+    cursor: pointer;
+    background: #005CA5;
+    color:#ffffff;
+    margin-top: 30px;
+    padding: 0.625rem 0.75rem;
+    border: 0.125rem solid transparent;
+    border-radius: 0.125rem;
+}
+.btn:hover{
+    opacity: 0.85;
+}
+.card-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap:wrap;
+    margin-top: 40px;
+}
+.card{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    margin: 20px;
+}
+.card img{
+    width: 100%;
+    height: auto;
+
+}
+.card-content{
+    padding: 16px;
+}
+.card-content h3{
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+.card-content p{
+    font-size: 15px;
+    line-height: 1.2;
+}
+.card-content a {
+    margin-top:15px;
+    cursor: pointer;
+    color:#005CA5;
+    margin-top: 15px;
+}
+.card-content a i{
+    margin-top: 25px;
+}
