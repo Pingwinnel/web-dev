@@ -5,7 +5,7 @@
 }
 html{
     min-width: max-content;
-    height: 915px;
+    height: auto;
 }
 .wrapper{
     position: relative;
@@ -14,7 +14,7 @@ html{
 body{
     background: #fff;
     min-width: max-content;
-    height: 915px;
+    height: auto;
     margin: 0;
     padding: 0;
 }
