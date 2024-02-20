@@ -18,7 +18,15 @@
       <p class="desc">{{ product.description }}</p>
       </div>
       <div class="rating">
-       <p class="rating_txt"> Рейтинг: {{ product.rating }}</p>
+       <p class="rating_txt">
+           <star-rating
+               [value]="product.rating"
+               [totalstars]="5"
+               checkedcolor="gold"
+               uncheckedcolor="grey"
+               size="24px"
+               [readonly]="true">
+       </star-rating></p>
       </div>
       <div class="button_wrapper">
       <button type="button" (click)="shareOnWhatsApp(product)">

@@ -5,12 +5,14 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
+import {RatingModule} from "ng-starrating";
 import { ProductListComponent } from './product-list/product-list.component';
 @NgModule({
   imports: [
     BrowserModule,
     ReactiveFormsModule,
     RouterModule.forRoot([{ path: '', component: ProductListComponent },]),
+    RatingModule
   ],
   declarations: [AppComponent, TopBarComponent, ProductListComponent],
   bootstrap: [AppComponent],
