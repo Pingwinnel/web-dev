@@ -11,14 +11,14 @@
           </div>
         </div>
       </section>
-      <a href="{{ product.url_product }}">
+      <a href="{{ product.url_product }}" [routerLink]="['/products', product.id]" >
         <h3 class="name">{{ product.name }}</h3>
       </a>
       <div class="text_desc">
       <p class="desc">{{ product.description }}</p>
       </div>
       <div class="rating">
-       <p class="rating_txt">
+       <span class="rating_txt">
            <star-rating
                [value]="product.rating"
                [totalstars]="5"
@@ -26,8 +26,11 @@
                uncheckedcolor="grey"
                size="24px"
                [readonly]="true">
-       </star-rating></p>
+       </star-rating></span>
       </div>
+        <div class="price" >
+            {{product.price}}₸
+        </div>
       <div class="button_wrapper">
       <button type="button" (click)="shareOnWhatsApp(product)">
         Share on WhatsApp
