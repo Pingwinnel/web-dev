@@ -22,7 +22,7 @@ export class CategoryComponent {
     { id: 3, name: "PC component", productList: products.filter(p=>p.category==="PC component") },
   ];
 
-  filteredCategories: Category[] = [];
+  filteredCategories: Category[] = this.categoryList;
 
   selectCategory(selected: Category) {
     this.curCategory = selected;
