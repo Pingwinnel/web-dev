@@ -2,13 +2,16 @@ import { Component, Input } from '@angular/core';
 import { Product } from '../products';
 import { ProductListComponent } from '../product-list/product-list.component';
 import {RatingModule} from "ng-starrating";
+import {NgForOf} from "@angular/common";
 
 @Component({
   selector: 'app-product-item',
   templateUrl: './product-item.component.html',
   standalone: true,
   imports: [
-    RatingModule
+    RatingModule,
+    NgForOf,
+    NgForOf
   ],
   styleUrls: ['./product-item.component.css']
 })
@@ -27,7 +30,7 @@ export class ProductItemComponent {
     window.open(whatsappUrl, '_blank');
   }
 
-  // Method to share on Telegram
+
   shareOnTelegram(product: Product) {
     const productName = encodeURIComponent(product.name);
     const productLink = encodeURIComponent(product.url_product);
@@ -36,9 +39,6 @@ export class ProductItemComponent {
     window.open(telegramUrl, '_blank');
   }
 
-  onNotify() {
-    window.alert('You will be notified when the product goes on sale');
-  }
 
   like() {
     this.likes++;

@@ -1,12 +1,13 @@
-<section class="galery">
-    <div class="container">
-        <div class="img_gallery">
-            <div class="slide" *ngFor="let productimg of product.image_url">
-                <img src="{{ productimg }}" />
+<div class="wrapper">
+    <section class="galery">
+        <div class="container">
+            <div class="img_gallery">
+                <div class="slide" *ngFor="let productimg of product.image_url">
+                    <img src="{{ productimg }}" />
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 <a href="{{ product.url_product }}" >
     <h3 class="name">{{ product.name }}</h3>
 </a>
@@ -24,6 +25,9 @@
                    [readonly]="true">
        </star-rating></span>
 </div>
+<div class="likes">
+    <p>Likes: {{product.likes}}</p>
+</div>
 <div class="price" >
     {{product.price}}₸
 </div>
@@ -34,4 +38,12 @@
     <button type="button" (click)="shareOnTelegram(product)">
         Share on Telegram
     </button>
+    <button type="button" (click)="like()" class="share-button">
+        Like
+    </button>
+
+    <button type="button" (click)="remove()" class="share-button">
+        Remove
+    </button>
+</div>
 </div>

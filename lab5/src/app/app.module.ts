@@ -17,14 +17,14 @@ import {ProductItemComponent} from "./product-item/product-item.component";
         ReactiveFormsModule,
         RouterModule.forRoot([
             {path: '', component: CategoryComponent},//ProductListComponent },
-            {path: '', component: ProductListComponent},
             {path: 'cart', component: CartComponent},]),
 
         RatingModule,
         CartComponent,
         ProductItemComponent,
+
     ],
-    declarations: [AppComponent, TopBarComponent, ProductListComponent],
+    declarations: [AppComponent, TopBarComponent, ProductListComponent,CategoryComponent,],
     bootstrap: [AppComponent],
     exports: [
         ProductListComponent

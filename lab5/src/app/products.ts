@@ -10,6 +10,7 @@ export interface Product {
   rating:number;
   url_product:string;
   category:string;
+  likes:number;
 }
 
 export const products = [
@@ -21,7 +22,8 @@ export const products = [
     image_url:["https://resources.cdn-kaspi.kz/img/m/p/h70/h1a/65147416477726.jpg?format=gallery-medium","https://resources.cdn-kaspi.kz/img/m/p/h4a/h5a/65147417002014.jpg?format=gallery-medium"],
     rating:5,
     url_product:"https://kaspi.kz/shop/p/realme-buds-t100-chernyi-107357596/?c=750000000",
-    category:"Earphone"
+    category:"Earphone",
+    likes:0
   },
   {
     id: 3,
@@ -31,7 +33,8 @@ export const products = [
     image_url:["https://resources.cdn-kaspi.kz/img/m/p/h9a/h35/64082972704798.jpg?format=gallery-medium","https://resources.cdn-kaspi.kz/img/m/p/hf9/h31/64082981224478.jpg?format=gallery-medium","https://resources.cdn-kaspi.kz/img/m/p/hf8/he3/64082978111518.jpg?format=gallery-medium"],
     rating:5,
     url_product:"https://kaspi.kz/shop/p/apple-macbook-air-13-mgn93-serebristyi-100798912/?c=750000000",
-    category:"Laptop"
+    category:"Laptop",
+    likes:0
   },
   {
     id: 4,
@@ -41,7 +44,8 @@ export const products = [
     image_url:["https://resources.cdn-kaspi.kz/img/m/p/hfe/ha4/63971413032990.jpg?format=gallery-medium","https://resources.cdn-kaspi.kz/img/m/p/h21/h1c/63971415916574.jpg?format=gallery-medium","https://resources.cdn-kaspi.kz/img/m/p/hb0/h40/63971418603550.jpg?format=gallery-medium"],
     rating:4,
     url_product:"https://kaspi.kz/shop/p/xiaomi-redmi-airdots-s-chernyi-100286960/?c=750000000",
-    category:"Earphone"
+    category:"Earphone",
+    likes:0
   },
   {
     id: 5,
@@ -51,7 +55,8 @@ export const products = [
     image_url:["https://resources.cdn-kaspi.kz/img/m/p/h32/h70/84378448199710.jpg?format=gallery-medium","https://resources.cdn-kaspi.kz/img/m/p/h35/h8f/84378448232478.jpg?format=gallery-medium","https://resources.cdn-kaspi.kz/img/m/p/h3d/h8e/64208874405918.jpg?format=gallery-medium"],
     rating:5,
     url_product:"https://kaspi.kz/shop/p/apple-iphone-13-128gb-midnight-chernyi-102298404/?c=750000000",
-    category:"Phone"
+    category:"Phone",
+    likes:0
   },
   {
     id: 6,
@@ -61,7 +66,8 @@ export const products = [
     image_url:["https://resources.cdn-kaspi.kz/img/m/p/h97/h81/68183487119390.jpg?format=gallery-medium"],
     rating:5,
     url_product:"https://kaspi.kz/shop/p/empire-computers-gaming-pro-70-chernyi-108560461/?c=750000000",
-    category:"PC"
+    category:"PC",
+    likes:0
   },
   {
     id: 7,
@@ -71,7 +77,8 @@ export const products = [
     image_url:["https://resources.cdn-kaspi.kz/img/m/p/h56/h5d/69226582016030.jpg?format=gallery-medium","https://resources.cdn-kaspi.kz/img/m/p/h4b/h45/69226582540318.jpg?format=gallery-medium"],
     rating:5,
     url_product:"https://kaspi.kz/shop/p/unicomp-gaming-5-pro-belyi-108980574/?c=750000000",
-    category: "PC"
+    category: "PC",
+    likes:0
   },
 
   {
@@ -82,7 +89,8 @@ export const products = [
     image_url:["https://resources.cdn-kaspi.kz/img/m/p/h70/hb2/63763877920798.jpg?format=gallery-medium","https://resources.cdn-kaspi.kz/img/m/p/hff/h36/63763878445086.jpg?format=gallery-medium","https://resources.cdn-kaspi.kz/img/m/p/hae/h99/63763879428126.jpg?format=gallery-medium"],
     rating:5,
     url_product:"https://kaspi.kz/shop/p/ssd-kingston-sa400s37-480-gb-6800659/?c=750000000",
-    category: "PC component"
+    category: "PC component",
+    likes:0
   },
   {
     id: 10,
@@ -92,7 +100,8 @@ export const products = [
     image_url:["https://resources.cdn-kaspi.kz/img/m/p/he5/h32/63858015436830.jpg?format=gallery-medium","https://resources.cdn-kaspi.kz/img/m/p/h17/hc4/63858018779166.jpg?format=gallery-medium","https://resources.cdn-kaspi.kz/img/m/p/h87/h05/63858021203998.jpg?format=gallery-medium","https://resources.cdn-kaspi.kz/img/m/p/h75/hde/63858024415262.jpg?format=gallery-medium"],
     rating:5,
     url_product:"https://kaspi.kz/shop/p/xiaomi-mi-curved-gaming-xmmntwq34-chernyi-100129635/?c=750000000",
-    category: "PC component"
+    category: "PC component",
+    likes:0
   }
 ];
 
