@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
-import {RouterLink} from "@angular/router";
+
 import {Category} from "../categories";
-import {products} from "../products";
-import {AppModule} from "../app.module";
-import {NgForOf, NgIf} from "@angular/common";
+import {Product, products} from "../products";
+
 
 
 @Component({
@@ -13,13 +12,14 @@ import {NgForOf, NgIf} from "@angular/common";
 })
 export class CategoryComponent {
   curCategory: Category | undefined;
+  curProducts:Product[]=products
   categoryList: Category[] = [
-    { id:7, name:"All",productList:products},
-    { id: 0, name: "PC", productList: products.filter(p=>p.category==="PC") },
-    { id: 1, name: "Earphone", productList: products.filter(p=>p.category==="Earphone") },
-    { id: 2, name: "Laptop", productList: products.filter(p=>p.category==="Laptop") },
-    { id: 3, name: "Phones", productList: products.filter(p=>p.category==="Phone") },
-    { id: 3, name: "PC component", productList: products.filter(p=>p.category==="PC component") },
+    { id:7, name:"All",productList:this.curProducts},
+    { id: 0, name: "PC", productList: this.curProducts.filter(p=>p.category==="PC") },
+    { id: 1, name: "Earphone", productList: this.curProducts.filter(p=>p.category==="Earphone") },
+    { id: 2, name: "Laptop", productList: this.curProducts.filter(p=>p.category==="Laptop") },
+    { id: 3, name: "Phones", productList: this.curProducts.filter(p=>p.category==="Phone") },
+    { id: 3, name: "PC component", productList: this.curProducts.filter(p=>p.category==="PC component") },
   ];
 
   filteredCategories: Category[] = this.categoryList;

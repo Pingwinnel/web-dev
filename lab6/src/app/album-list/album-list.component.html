@@ -1,0 +1,13 @@
+<form>
+<input type="text" placeholder="Album title" [(ngModel)]="newAlbum.title">
+<button (click)="createAlbum()">Add New Album</button>
+</form>
+
+<ul>
+<li *ngFor="let album of albums$ | async">
+  <a [title]="album.title + ' details'" [routerLink]="['/albums', album.id]">
+    {{album.title}}
+  </a>
+  <button (click)="deleteAlbum(album)">Delete</button>
+</li>
+</ul>

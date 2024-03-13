@@ -1,8 +1,9 @@
 import { Component, Input } from '@angular/core';
-import { Product } from '../products';
+import {Product, products} from '../products';
 import { ProductListComponent } from '../product-list/product-list.component';
 import {RatingModule} from "ng-starrating";
 import {NgForOf} from "@angular/common";
+import {CategoryComponent} from "../category/category.component";
 
 @Component({
   selector: 'app-product-item',
@@ -18,7 +19,7 @@ import {NgForOf} from "@angular/common";
 export class ProductItemComponent {
   @Input() product: any;
 
-  constructor(private productListComponent: ProductListComponent) {}
+  constructor(private productListComponent: ProductListComponent,private categorylist:CategoryComponent) {}
 
   likes: number = 0;
 
@@ -48,5 +49,6 @@ export class ProductItemComponent {
   remove() {
     this.productListComponent.removeProduct(this.product);
     this.product = null;
+    this.categorylist.curProducts=products
   }
 }

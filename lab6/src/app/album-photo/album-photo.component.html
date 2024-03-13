@@ -1,0 +1,7 @@
+<div class="photo_wrapper">
+<div *ngFor="let albumPhoto of albumPhotos$ | async" class="photo-form">
+    <p>Photo number: {{albumPhoto.id}}</p>
+    <p>Title: {{albumPhoto.title}}</p>
+    <img src="{{albumPhoto.url}}">
+</div>
+</div>
