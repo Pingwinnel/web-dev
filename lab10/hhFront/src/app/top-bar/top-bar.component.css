@@ -1,0 +1,26 @@
+.wrapper{
+width: 100%;
+display: flex;
+}
+
+.main_nav{
+  display: flex;
+  justify-items: center;
+  width: 100%;
+}
+
+ul{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+a{
+  color: #fff;
+  display: flex;
+}
+/*
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at https://angular.io/license
+*/
