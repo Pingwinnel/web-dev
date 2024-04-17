@@ -1,40 +1,32 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from "@angular/common/http";
-import { Album } from './album';
-import { AlbumPhoto } from './album_photo';
+import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-
+import {Company} from "./company";
+import {Vacancy} from "./vacancy";
 
 @Injectable({
   providedIn: 'root'
 })
-export class AlbumsService {
-  BASE_URL = 'https://jsonplaceholder.typicode.com';
+export class ApiService {
+  private baseUrl = 'http://localhost:8000/';
 
   constructor(private http: HttpClient) { }
 
-  getAlbums(): Observable<Album[]> {
-    return this.http.get<Album[]>(`${this.BASE_URL}/albums`);
+  getCompanies(): Observable<Company[]> {
+    return this.http.get<Company[]>(`${this.baseUrl}companies/`);
   }
 
-  getAlbumPhotos(albumId: number): Observable<AlbumPhoto[]> {
-    return this.http.get<AlbumPhoto[]>(`${this.BASE_URL}/albums/${albumId}/photos`);
+  getCompany(id: number): Observable<Company> {
+    return this.http.get<Company>(`${this.baseUrl}companies/${id}/`);
   }
 
-  getAlbum(id: number) {
-    return this.http.get<Album>(`${this.BASE_URL}/albums/${id}`);
+  getVacanciesByCompany(id: number): Observable<Vacancy[]> {
+    return this.http.get<Vacancy[]>(`${this.baseUrl}companies/${id}/vacancies/`);
   }
 
-  addAlbum(album: Album):Observable<Album> {
-    return this.http.post<Album>(`${this.BASE_URL}/albums`,album);
+
+  getVacancy(id: number): Observable<Vacancy> {
+    return this.http.get<Vacancy>(`${this.baseUrl}vacancies/${id}/`);
   }
 
-  deleteAlbum(id: number) {
-    return this.http.delete<Album>(`${this.BASE_URL}/albums/${id}`);
-  }
-
-  updateAlbum(albumId: number, newTitle: string):Observable<Album> {
-    const body = { title: newTitle };
-    return this.http.put<Album>(`${this.BASE_URL}/albums/${albumId}`, body);
-  }
 }

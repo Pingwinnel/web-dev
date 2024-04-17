@@ -1,0 +1,18 @@
+<div class="wrapper">
+    <div  class="company-form">
+        <div class="company_info_form">
+        <div class="about_company">
+        <h3 class="company_name">{{company$.name}}</h3>
+        <p>City: {{company$.city}}</p>
+        <p>Address: {{company$.address}}</p>
+        </div>
+        <p class="description_block">{{company$.description}}</p>
+        </div>
+        <h2>Вакансии компании</h2>
+        <div class="vacancies" *ngFor="let vacancy of  vacancy_list$ | async " >
+            <a class="highligted_info" [routerLink]="['/vacancies',vacancy.id]">{{vacancy.name}}</a>
+            <p >Salary:{{vacancy.salary}}₸</p>
+            <p>{{company$.name}}, {{company$.city}}</p>
+        </div>
+    </div>
+</div>

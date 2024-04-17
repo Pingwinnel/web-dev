@@ -1,0 +1,57 @@
+.vacancies{
+    display: inline-block;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 20px;
+    border: 2px solid rgb(42, 49, 55);
+    border-radius: 10px;
+    width: 30%;
+    text-align: center;
+    padding-top: 10px;
+}
+body{
+    width: 100%;
+    margin: 0;
+    padding:0;
+}
+.company-form{
+    width: 100%;
+    display: inline-block;
+
+}
+.company_info_form{
+    width: 100%;
+    display: flex;
+    margin-left:20px;
+    height: 100%;
+
+}
+p{
+    font-size: 14px;
+    color: rgb(42, 49, 55);
+    opacity: 0.9;
+}
+.highligted_info{
+    font-size: 18px;
+    opacity: 1;
+
+}
+.wrapper{
+    width: 98%;
+    margin: 0;
+    padding: 0;
+}
+.about_company{
+    background-color: rgb(244, 246, 251);
+    padding: 5px;
+    margin-right: 20px;
+}
+.description_block{
+   background-color: rgba(0, 0, 0, 0);
+    padding: 5px;
+    margin-right: 20px;
+    font-size: 18px;
+    height: auto;
+}
+
+

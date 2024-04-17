@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { AlbumsService } from "../album-service";
-import { Album } from "../album";
+import {ApiService} from "../album-service";
+import {Company} from "../company";
+import {Vacancy} from "../vacancy";
 import { BehaviorSubject } from 'rxjs';
+
 
 @Component({
   selector: 'app-album-list',
@@ -9,44 +11,26 @@ import { BehaviorSubject } from 'rxjs';
   styleUrls: ['./album-list.component.css']
 })
 export class AlbumListComponent implements OnInit {
-  readonly base_url = "https://jsonplaceholder.typicode.com";
-  albums$ = new BehaviorSubject<Album[]>([]);
-  newAlbum: Album = new Album();
+  companie_list$ = new BehaviorSubject<Company[]>([]);
 
-  constructor(private albumsService: AlbumsService) {}
+
+  constructor(private APIService: ApiService) {}
 
   ngOnInit(): void {
     this.getAlbums();
   }
 
   getAlbums() {
-    this.albumsService.getAlbums().subscribe(albums => {
-      this.albums$.next(albums);
+    this.APIService.getCompanies().subscribe(companies => {
+
+      this.companie_list$.next(companies);
     });
+
   }
 
-  createAlbum() {
-    this.albumsService.addAlbum(this.newAlbum).subscribe(album => {
-      const currentAlbums = this.albums$.value;
-      this.albums$.next([album, ...currentAlbums]);
-      this.newAlbum = new Album();
-    });
-  }
 
-  deleteAlbum(album: Album) {
-    this.albumsService.deleteAlbum(album.id).subscribe(() => {
-      const currentAlbums = this.albums$.value.filter(a => a.id !== album.id);
-      this.albums$.next([...currentAlbums]);
-    });
-  }
 
-  updateAlbum(id: number, newTitle: string) {
-    this.albumsService.updateAlbum(id, newTitle).subscribe(updatedAlbum => {
-      const currentAlbums = this.albums$.value;
-      const updatedAlbums = currentAlbums.map(album =>
-        album.id === id ? { ...album, title: newTitle } : album
-      );
-      this.albums$.next(updatedAlbums);
-    });
-  }
+
+
+
 }

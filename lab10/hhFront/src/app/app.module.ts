@@ -3,16 +3,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import {HttpClientModule} from "@angular/common/http"
-
 import { AppComponent } from './app.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { AlbumListComponent } from './album-list/album-list.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
-import { AlbumDetailComponent } from './album-detail/album-detail.component';
-import { AlbumPhoto } from './album_photo';
-import { AlbumPhotoComponent } from './album-photo/album-photo.component';
 import { CommonModule } from '@angular/common';
+import {CompanyDetailComponent} from "./company-detail/company-detail.component";
+import {VacancyDetailsComponent} from "./vacancy-details/vacancy-details.component";
 
 
 @NgModule({
@@ -21,12 +19,12 @@ import { CommonModule } from '@angular/common';
     HttpClientModule,
     FormsModule,
     RouterModule.forRoot([
-      {path:'home',component:HomeComponent},
-      {path:'about',component:AboutComponent},
-      {path:'albums',component:AlbumListComponent},
-      {path:'albums/:id',component:AlbumDetailComponent},
-      {path:'albums/:id/photos',component:AlbumPhotoComponent},
-      { path: '', redirectTo:"/home", pathMatch:'full'  }
+      { path: 'home', component: HomeComponent },
+      { path: 'about', component: AboutComponent },
+      { path: 'companies', component: AlbumListComponent },
+      { path: 'companies/:id', component: CompanyDetailComponent },
+      {path: 'vacancies/:id',component:VacancyDetailsComponent},
+      { path: '', redirectTo: '/home', pathMatch: 'full' },
     ]),
   ],
   declarations: [
@@ -34,8 +32,6 @@ import { CommonModule } from '@angular/common';
     HomeComponent,
     AboutComponent,
     AlbumListComponent,
-    AlbumDetailComponent,
-    AlbumPhotoComponent,
     TopBarComponent
   ],
   bootstrap: [

@@ -1,13 +1,15 @@
-<form>
-<input type="text" placeholder="Album title" [(ngModel)]="newAlbum.title">
-<button (click)="createAlbum()">Add New Album</button>
-</form>
-
+<div class="cards_wrapper">
 <ul>
-<li *ngFor="let album of albums$ | async">
-  <a [title]="album.title + ' details'" [routerLink]="['/albums', album.id]">
-    {{album.title}}
-  </a>
-  <button (click)="deleteAlbum(album)">Delete</button>
+<li *ngFor="let company of companie_list$ | async"  [routerLink]="['/companies', company.id]">
+    <div class="wrap_li">
+        <div class="line"></div>
+    <div class="wrap_form">
+    <a [title]="company.name + ' details'">
+        {{company.name}}
+    </a>
+    <p>City: {{company.city}}</p><p>Address: {{company.address}}</p>
+    </div>
+    </div>
 </li>
 </ul>
+</div>

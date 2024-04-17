@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 import { AlbumsService } from "../album-service";
 import { Album } from "../album";
 import { BehaviorSubject } from 'rxjs';
